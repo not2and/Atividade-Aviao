@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle de Avião</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+  <div id="containeraviao">
+    <img id="airplane" src="airplane.png" alt="Avião">
+</div>
+
+
+    <h1>Painel de Controle</h1>
+
+    <div class="selecao-paises">
+      <label for="pais-origem">País de Origem:</label>
+      <select id="pais-origem">
+        <option value="BR">Brasil</option>
+        <option value="US">Estados Unidos</option>
+        <option value="FR">França</option>
+        <option value="JP">Japão</option>
+        <option value="CA">Canadá</option>
+        <option value="AU">Austrália</option>
+        <option value="DE">Alemanha</option>
+        <option value="CN">China</option>
+        <option value="IN">Índia</option>
+        <option value="RU">Rússia</option>
+        <option value="MX">México</option>
+        <option value="AR">Argentina</option>
+        <option value="ZA">África do Sul</option>
+        <option value="EG">Egito</option>
+        <option value="NZ">Nova Zelândia</option>
+    </select>
+
+      <label for="pais-destino">País de Destino:</label>
+      <select id="pais-destino">
+        <option value="BR">Brasil</option>
+        <option value="US">Estados Unidos</option>
+        <option value="FR">França</option>
+        <option value="JP">Japão</option>
+        <option value="CA">Canadá</option>
+        <option value="AU">Austrália</option>
+        <option value="DE">Alemanha</option>
+        <option value="CN">China</option>
+        <option value="IN">Índia</option>
+        <option value="RU">Rússia</option>
+        <option value="MX">México</option>
+        <option value="AR">Argentina</option>
+        <option value="ZA">África do Sul</option>
+        <option value="EG">Egito</option>
+        <option value="NZ">Nova Zelândia</option>
+    </select>
+
+      <button id="calcular-rota">Calcular Rota</button>
+  </div>
+
+  <div class="info-rota">
+      <div id="distancia">Distância: 0 km</div>
+      <div id="tempo-voo">Tempo de Voo: 0 h</div>
+  </div>
+    <div class="painel">
+      <div class="medidores">
+        <div class="medidor" id="velocidade">Velocidade: 0 km/h</div>
+        <div class="medidor" id="altitude">Altitude: 0 m</div>
+        <div class="medidor" id="combustivel">Combustível: 100%</div>
+        <div class="medidor" id="direcao">Direção: 0°</div>
+        <div class="medidor" id="flaps">Flaps: 0%</div>
+        <div class="medidor" id="trem-de-pouso">Trem de Pouso: Baixado</div>
+    </div>
+       <div class="controles">
+        <button id="acelerar">Acelerar</button>
+        <button id="reduzir">Reduzir</button>
+        <button id="subir">Subir</button>
+        <button id="descer">Descer</button>
+        <button id="aumentar-flaps">Aumentar Flaps</button>
+        <button id="diminuir-flaps">Diminuir Flaps</button>
+        <button id="girar-esquerda">Girar Esquerda</button>
+        <button id="girar-direita">Girar Direita</button>
+        <button id="alternar-trem">Alternar Trem de Pouso</button>
+    </div>
+    </div>
+
+    <div class="mapa" id="mapa"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
